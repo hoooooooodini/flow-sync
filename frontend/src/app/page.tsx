@@ -6,7 +6,7 @@ import React from "react";
 import { useRouter } from "next/router";
 
 export default function Home() {
-
+  
   return (
     <main className="flex flex-col min-h-screen items-center justify-between p-6 md:p-12 lg:p-24 bg-blue-900">
       <nav className="flex items-center justify-between w-full max-w-5xl font-mono text-sm">
@@ -18,8 +18,11 @@ export default function Home() {
         <Link href="/login" className="mr-4 px-3 py-2 md:px-4 md:py-2 bg-white text-blue-900 rounded-lg">
             Login
           </Link>
-          <Link href="/signup" className="px-3 py-2 md:px-4 md:py-2 bg-orange-500 text-white rounded-lg">
+          <Link href="/signup" className="px-3 py-2 md:px-4 md:py-2 bg-orange-500 text-white rounded-lg mr-4">
             Sign Up
+          </Link>
+          <Link href="/dashboard" className="px-3 py-2 md:px-4 md:py-2 bg-red-700 text-white rounded-lg">
+            Dashboard
           </Link>
         </div>
       </nav>
@@ -27,7 +30,7 @@ export default function Home() {
       <div className="flex-grow flex flex-col md:flex-row w-full max-w-5xl mt-4 md:mt-12 ">
         <div className="w-full md:w-1/2 flex flex-col justify-start items-start px-6 md:px-12 mt-[-10px] md:mt-[-10px]">
           <h1 className="text-2xl md:text-4xl font-bold mb-6 text-white">
-            Notion to publish in "Minutes"
+          Notion to publish in &quot;Minutes&quot;
           </h1>
           <p className="text-base md:text-lg mb-6 text-white">
             Centralize, Automate, and Elevate Your Content Management Process with AI
@@ -37,7 +40,7 @@ export default function Home() {
           </button>
         </div>
         <div className="w-full md:w-1/2 mt-8 md:mt-0">
-          <video className="w-full h-auto" controls autoPlay>
+          <video className="w-full h-auto" controls>
             <source src="/HeroSectionVideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
