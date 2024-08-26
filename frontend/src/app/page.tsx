@@ -30,7 +30,7 @@ export default function Home() {
       <div className="flex-grow flex flex-col md:flex-row w-full max-w-5xl mt-4 md:mt-12 ">
         <div className="w-full md:w-1/2 flex flex-col justify-start items-start px-6 md:px-12 mt-[-10px] md:mt-[-10px]">
           <h1 className="text-2xl md:text-4xl font-bold mb-6 text-white">
-          Notion to publish in &quot;Minutes&quot;
+          Universal Workflow Automation Platform
           </h1>
           <p className="text-base md:text-lg mb-6 text-white">
             Centralize, Automate, and Elevate Your Content Management Process with AI
