@@ -1,12 +1,13 @@
-import styles from '../styles/DashboardSection.module.css'
+// components/DashboardSection.js
+import styles from './DashboardSection.module.css';
 
 const DashboardSection = () => {
   return (
     <div className={styles.dashboardContainer}>
       {/* Dashboard Heading */}
       <div className={styles.dashboardHeading}>
-        {/* <span className={styles.icon}>◈</span>
-        <span className={styles.title}>Dashboard</span> */}
+        <span className={styles.icon}>◈</span>
+        <span className={styles.title}>Dashboard</span>
       </div>
 
       {/* Flow Container */}

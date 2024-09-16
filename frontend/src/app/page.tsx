@@ -12,7 +12,7 @@ export default function Home() {
       <nav className="flex items-center justify-between w-full max-w-5xl font-mono text-sm">
         <div className="flex items-center">
           <Image src="/logo.png" alt="Logo" width={40} height={40} />
-          <span className="ml-3 text-lg font-bold text-white">houdinis</span>
+          <span className="ml-3 text-lg font-bold text-white">Houdinis</span>
         </div>
         <div className="flex">
         <Link href="/login" className="mr-4 px-3 py-2 md:px-4 md:py-2 bg-white text-blue-900 rounded-lg">
@@ -26,6 +26,7 @@ export default function Home() {
           </Link>
         </div>
       </nav>
+      
 
       <div className="flex-grow flex flex-col md:flex-row w-full max-w-5xl mt-4 md:mt-12 ">
         <div className="w-full md:w-1/2 flex flex-col justify-start items-start px-6 md:px-12 mt-[-10px] md:mt-[-10px]">
@@ -44,6 +45,7 @@ export default function Home() {
             <source src="/HeroSectionVideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          
         </div>
       </div>
     </main>

@@ -1,0 +1,63 @@
+/* DashboardSection.module.css */
+
+/* Container for the whole dashboard section */
+.dashboardContainer {
+    padding: 20px;
+    border: 2px solid #7e57c2; /* Purple border */
+    border-radius: 15px;
+    background-color: #e0f7fa; /* Light background for the section */
+}
+
+/* Dashboard heading styling */
+.dashboardHeading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #7e57c2; /* Purple color for dashboard heading */
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+/* Container for the flow section */
+.flowContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4a261; /* Orange background */
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 4px solid #7e57c2; /* Purple border */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Text inside the flow container */
+.flowText {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+
+/* Button styling for Execute Flow */
+.executeButton {
+    background-color: #f28482; /* Red button */
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: black;
+    cursor: pointer;
+}
+
+.executeButton svg {
+    fill: black;
+}
