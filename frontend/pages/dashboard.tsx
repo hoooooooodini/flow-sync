@@ -24,7 +24,7 @@ const DashboardSection = () => {
   // Function to submit Notion URL to backend API
   const submitNotionURL = async () => {
     try {
-      const response = await fetch('http://localhost:5000/submit-url', {  // Specify the full URL
+      const response = await fetch('http://localhost:5000/execute-flow', {  // Specify the full URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,7 +35,8 @@ const DashboardSection = () => {
       const data = await response.json();
   
       if (response.ok) {
-        alert('Notion URL processed successfully');
+        alert('Flow executed successfully');
+        console.log(data.output);
       } else {
         alert(`Error: ${data.error}`);
       }
@@ -45,6 +46,29 @@ const DashboardSection = () => {
     }
   };
 
+  const handleExecuteFlow = async () => {
+    try {
+      const response = await fetch('api/run-script', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        alert('Flow executed successfully');
+        console.log('Output:', data.output);
+      } else {
+        alert(`Error: ${data.error}`);
+      }
+    } catch (error) {
+      console.error('Error executing flow:', error);
+      alert('Failed to execute flow');
+    }
+  };
+  
   return (
     <div className={styles.pageContainer}>
       {/* Sidebar */}
@@ -56,7 +80,7 @@ const DashboardSection = () => {
           <div className={styles.flowText}>
             New Flow
           </div>
-          <button className={styles.executeButton}>
+          <button className={styles.executeButton} onClick={handleExecuteFlow}>
             <span>Execute Flow</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="black">
               <path d="M3 12l18-12v24z"/>
