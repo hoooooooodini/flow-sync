@@ -102,21 +102,19 @@ const DashboardSection = () => {
       {/* Placeholder for adding new flow (instead of modal) */}
       {isModalOpen && (
         <div className={styles.inlinePlaceholder}>
-          <h3>Enter Notion Database URL</h3>
+          <h3>Enter Notion Database ID</h3>
           <input
             type="text"
             value={notionURL}
             onChange={handleURLChange}
-            placeholder="Enter Notion database URL"
+            placeholder="Enter Notion database"
             className={styles.modalInput}
           />
           <div className={styles.modalButtons}>
             <button onClick={toggleModal} className={styles.modalCancelButton}>
               Cancel
             </button>
-            <button onClick={submitNotionURL} className={styles.modalSaveButton}>
-              Submit
-            </button>
+            
           </div>
         </div>
       )}

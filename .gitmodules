@@ -1,0 +1,6 @@
+[submodule "websites/themes/cuisine-book"]
+	path = websites/themes/cuisine-book
+	url = https://github.com/ntk148v/hugo-cuisine-book
+[submodule "website/themes/cuisine-book"]
+	path = website/themes/cuisine-book
+	url = https://github.com/ntk148v/hugo-cuisine-book

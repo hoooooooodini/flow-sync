@@ -125,16 +125,20 @@
 .addFlowContainer {
     margin-top: 20px;
   }
-
+  
   .inlinePlaceholder {
-    position: relative;
+    position: fixed; /* Fix the element relative to the viewport */
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    width: 300px;
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width */
+    min-width: 200px; /* Minimum width */
+    margin-left: 450px;
     animation: flyIn 0.5s ease-out;
+    
   }
 
   .inlinePlaceholder h3 {
