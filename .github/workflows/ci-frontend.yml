@@ -9,9 +9,9 @@ jobs:
     outputs:
       # TARGET_DIRECTORIES: '["frontend"]'
       TARGET_DIRECTORY: 'frontend'
-      NODE_16_VERSION: 16.16.0
+      # NODE_16_VERSION: 16.16.0
       NODE_18_VERSION: 18.18.0
-      NODE_20_VERSION: 20.12.2
+      # NODE_20_VERSION: 20.12.2
     steps:
       - run: echo 'Setting constants.'
 
@@ -22,9 +22,9 @@ jobs:
     strategy:
       matrix:
         node-version: [
-          '${{ needs.SetGlobalConstants.outputs.NODE_16_VERSION }}',
+          # '${{ needs.SetGlobalConstants.outputs.NODE_16_VERSION }}',
           '${{ needs.SetGlobalConstants.outputs.NODE_18_VERSION }}',
-          '${{ needs.SetGlobalConstants.outputs.NODE_20_VERSION }}'
+          # '${{ needs.SetGlobalConstants.outputs.NODE_20_VERSION }}'
         ]
     steps:
       - name: Checkout repository
@@ -67,7 +67,7 @@ jobs:
       - name: Setup Node.js and Install Dependencies
         uses: ./.github/actions/setup_node_dependencies
         with:
-          node-version: '${{ needs.SetGlobalConstants.outputs.NODE_20_VERSION }}' 
+          node-version: '${{ needs.SetGlobalConstants.outputs.NODE_18_VERSION }}' 
           target-directory: ${{ needs.SetGlobalConstants.outputs.TARGET_DIRECTORY }}
       - name: Check Type
         run: pnpm run check:type
@@ -82,7 +82,7 @@ jobs:
       - name: Setup Node.js and Install Dependencies
         uses: ./.github/actions/setup_node_dependencies
         with:
-          node-version: '${{ needs.SetGlobalConstants.outputs.NODE_20_VERSION }}' 
+          node-version: '${{ needs.SetGlobalConstants.outputs.NODE_18_VERSION }}' 
           target-directory: ${{ needs.SetGlobalConstants.outputs.TARGET_DIRECTORY }}
       - name: Check Type
         run: pnpm run lint
@@ -97,7 +97,7 @@ jobs:
       - name: Setup Node.js and Install Dependencies
         uses: ./.github/actions/setup_node_dependencies
         with:
-          node-version: '${{ needs.SetGlobalConstants.outputs.NODE_20_VERSION }}' 
+          node-version: '${{ needs.SetGlobalConstants.outputs.NODE_18_VERSION }}' 
           target-directory: ${{ needs.SetGlobalConstants.outputs.TARGET_DIRECTORY }}
       - name: Check Type
         run: pnpm run check:format
@@ -112,7 +112,7 @@ jobs:
       - name: Setup Node.js and Install Dependencies
         uses: ./.github/actions/setup_node_dependencies
         with:
-          node-version: '${{ needs.SetGlobalConstants.outputs.NODE_20_VERSION }}' 
+          node-version: '${{ needs.SetGlobalConstants.outputs.NODE_18_VERSION }}' 
           target-directory: ${{ needs.SetGlobalConstants.outputs.TARGET_DIRECTORY }}
       - name: Check Type
         run: pnpm run check:knip
@@ -135,7 +135,7 @@ jobs:
       - name: Setup Node.js and Install Dependencies
         uses: ./.github/actions/setup_node_dependencies
         with:
-          node-version: '${{ needs.SetGlobalConstants.outputs.NODE_20_VERSION }}' 
+          node-version: '${{ needs.SetGlobalConstants.outputs.NODE_18_VERSION }}' 
           target-directory: ${{ needs.SetGlobalConstants.outputs.TARGET_DIRECTORY }}
       - name: Check Type
         run: pnpm run test
@@ -157,7 +157,7 @@ jobs:
       - name: Setup Node.js and Install Dependencies
         uses: ./.github/actions/setup_node_dependencies
         with:
-          node-version: '${{ needs.SetGlobalConstants.outputs.NODE_20_VERSION }}' 
+          node-version: '${{ needs.SetGlobalConstants.outputs.NODE_18_VERSION }}' 
           target-directory: ${{ needs.SetGlobalConstants.outputs.TARGET_DIRECTORY }}
       - name: Check Type
         run: pnpm run build
